@@ -184,6 +184,7 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 # .idea
 
-/page/migrations/
-/page/static/images/
+page/migrations/
+page/static/images/
+staticfiles/
 /db.sqlite3

@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv, find_dotenv
+
+# Load dotenv file for secrets
+load_dotenv(find_dotenv())
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7$00js6f7g9ec)!ew78f%&a@)yt_#x_b%mvbz+zri&*%8*c47-'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -132,8 +137,8 @@ MEDIA_ROOT = BASE_DIR / 'page/static/images/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "captainontario14@gmail.com"
-EMAIL_HOST_PASSWORD = 'buda laje oteh tfbc'
+EMAIL_HOST_USER = "littleworkerrat@gmail.com"
+EMAIL_HOST_PASSWORD = os.environ['APP_PASSWORD']
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
