@@ -184,7 +184,7 @@ fabric.properties
 # idea folder, uncomment if you don't need it
 # .idea
 
+000*.py
 page/migrations/
-page/static/images/
 staticfiles/
-/db.sqlite3
+db.sqlite3
