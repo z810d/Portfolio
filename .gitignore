@@ -185,6 +185,6 @@ fabric.properties
 # .idea
 
 000*.py
-page/migrations/
+**/page/migrations/
 staticfiles/
 db.sqlite3
